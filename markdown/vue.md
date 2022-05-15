@@ -34,4 +34,12 @@
 ![](./vueImg/30.jpg)
 ![](./vueImg/31.jpg)
 ## 侦听器
+![](./vueImg/32.jpg)
+![](./vueImg/33.jpg)
+## 计算属性
+![](./vueImg/34.jpg)
+![](./vueImg/35.jpg)
+## axios
+![](./vueImg/36.jpg)
+![](./vueImg/37.jpg)
  

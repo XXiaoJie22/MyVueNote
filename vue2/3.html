@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="app">
+        <p>{{ info }}</p>
+        <input type="text" v-model="username">
+    </div>
+</body>
+<script src="./lib/vue-2.6.12.js"></script>
+<script src="./lib/axios.js"></script>
+<script>
+    // axios 请求服务器
+    axios({
+        method: 'GET',
+        url: 'http://127.0.0.1:8000/api/get',
+    }).then(function (msg) {console.log(msg.data);});
+    // 对象里面的data属性才是我们拿的真实数据
+   
+    const vm = new Vue({
+        el: app,
+        data: {
+            username:'Xiaojie',
+            age:'22',
+        },
+        // 计算属性  要定义成方法格式 返回值是最终结果
+        // 声明的时候是个方法，但使用的时候就是个属性
+        computed: {
+            info(){
+                return this.username+this.age
+            }
+        },
+    });
+</script>
+</html>

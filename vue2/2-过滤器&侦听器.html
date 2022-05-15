@@ -12,6 +12,7 @@
         <!-- 内容是过滤器返回值 -->
         <p>{{ message | capi }}</p>
         <input type="text" v-model="username">
+        <input type="text" v-model="info.username">
     </div>
     <script src="./lib/vue-2.6.12.js"></script>
     <script>
@@ -25,7 +26,8 @@
             el: '#app',
             data: {
                 message: 'hello',
-                username: '',
+                username: 'xiaojie',
+                info: {username: 'xiaojie22'},
             },
             // 过滤器函数
             filters: {
@@ -41,9 +43,35 @@
             // 侦听器
             watch: {
                 // 侦听器本质上是一个函数，要监视哪个数据的变化，就把数据名作为方法名即可 第一个参数是新值，第二个是旧值
-                username(newVal,oldVal){
+                // 方法格式
+                // username(newVal,oldVal){
+                //     console.log(newVal,oldVal);
+                // }
+                
+                // 定义对象格式侦听器
+                username: {
+                    // 侦听器的处理函数
+                    handler(newVal,oldVal){
+                        console.log(newVal,oldVal);
+                    },
+                    // 默认值是false , 控制侦听器是否开始自动触发一次
+                    immediate: true,
+                },
+                // 监听info对象
+                info:{
+                    // 侦听器的处理函数
+                    handler(newVal){
+                        console.log(newVal);
+                    },
+                    // 开启深度监听,只要对象中的任何一个属性变化了，都会触发
+                    deep: true,
+                },
+                // 监听info对象里面的usename属性
+                // 监听对象子属性变化，必须要用一层单引号 
+                'info.username'(newVal,oldVal){
                     console.log(newVal,oldVal);
-                }
+                },
+
             },
         });
 
