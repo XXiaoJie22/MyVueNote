@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap.css">
+    <style>
+        table {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- vue 渲染数据固定写法双花括号 -->
+    <div id="app">
+        <p>{{username}}</p>
+
+        <!-- 渲染html字符串 -->
+        <p v-html="ht"></p>
+
+        <!-- 属性绑定指令 -->
+        <input type="text" v-bind:placeholder="tip">
+        <input type="text" :placeholder="tip">
+        <p>count 的值是{{count}}</p>
+
+        <!-- 事件绑定指令 -->
+        <!-- vue 提供了内置变量,名为$event,它就是原生DOM的对象事件e -->
+        <button v-on:click="add(1,$event)">+1</button>
+        <!-- 简写 -->
+        <button @click="sub(1,$event)">-1</button>
+        <!-- 只有键盘事件能用 按下esc或者enter触发 -->
+        <input type="text" @keyup.esc="clear" @keyup.enter="ajaxz">
+
+        <!-- 双向绑定指令 适合表单元素使用，即有value -->
+        <!-- 改这个文本框，里面的usename也会变 -->
+        <!-- 类似:value="username"只不过这个是单项的 -->
+        <input type="text" v-model="username"> 
+        <select v-model="city">
+            <option value="">请选择城市</option>
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广州</option>
+            <!-- 可以通过改变city的值来显示默认选项 -->
+        </select>
+
+        <!-- 条件渲染指令 -->
+        <!-- v-if 每一次都会动态移除  v-show 只是改display -->
+        <p v-if="flag">v-if条件渲染</p>
+        <p v-show="flag">v-show</p>
+
+        <!-- 列表渲染 -->
+        <table class="table-bordered table-striped table-hover">
+            <thead>
+                <th>索引</th>
+                <th>ID</th>
+                <th>名字</th>
+                <th>age</th>
+            </thead>
+            <tbody>
+                <!-- 官方建议，只要用了v-for 指令，那么一定要绑定一个 :key 属性 而且 尽量把id作为key的值 -->
+                <tr v-for="(item,index) in list" :key="item.id">  
+                    <td>{{ index + 1 }}</td>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.age }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<!-- 导入vue库文件 -->
+<script src="./lib/vue-2.6.12.js"></script>
+<script>
+    // 创建实例对象
+    const vm = new Vue({
+        // el 属性是固定写法，表示当前 vm 实例要控制页面上的哪个区域，接收的值是一个选择器
+        el: "#app",
+        // data 对象就是要渲染到页面上的数据
+        data: {
+            username: 'zhangsan',
+            tip: '请输入账号',
+            ht: '<h1>你好<h1>',
+            count: 3,
+            city: '',
+            flag: true,
+            list:[
+                {id:1,name:'XiaoJie',age: 18},
+                {id:2,name:'XiaoMing',age: 22},
+                {id:3,name: 'XiaoHu',age: 23},
+            ],
+        },
+        // 定义事件处理函数
+        methods: {
+            // es6 简写  add(){}
+            add: function(n,e){
+                this.count+=n; // vm.count
+                console.log(e);
+                // count为偶数按钮变红
+                if(this.count%2 === 0){
+                    e.target.style.backgroundColor = 'red';  
+                }else{
+                    e.target.style.backgroundColor = '';
+                }
+            },
+            sub(n,e){
+                this.count-=n;
+            },
+            clear(e){
+                e.target.value = '';
+            },
+            ajaxz(e){
+                console.log('按了enter');
+            },
+        }
+    });
+</script>
+</html>

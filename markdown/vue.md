@@ -1,0 +1,37 @@
+## 一、初见vue
+![](./vueImg/1.jpg)
+![](./vueImg/2.jpg)
+![](./vueImg/3.jpg)
+![](./vueImg/4.jpg)
+![](./vueImg/5.jpg)
+![](./vueImg/6.jpg)
+![](./vueImg/7.jpg)
+![](./vueImg/8.jpg)
+## 二、vue指令与过滤器
+![](./vueImg/9.jpg)
+![](./vueImg/10.jpg)
+![](./vueImg/11.jpg)<br>
+<b>v-text 会覆盖元素内部原有的内容<br>
+![](./vueImg/12.jpg)
+![](./vueImg/13.jpg)
+![](./vueImg/14.jpg)
+![](./vueImg/15.jpg)
+![](./vueImg/16.jpg)
+![](./vueImg/17.jpg)
+![](./vueImg/18.jpg)
+![](./vueImg/19.jpg)
+![](./vueImg/20.jpg)
+![](./vueImg/21.jpg)
+![](./vueImg/22.jpg)
+![](./vueImg/23.jpg)
+![](./vueImg/24.jpg)
+![](./vueImg/25.jpg)
+### 过滤器(vue3已经砍掉了)
+![](./vueImg/26.jpg)
+![](./vueImg/27.jpg)
+![](./vueImg/28.jpg)
+![](./vueImg/29.jpg)
+![](./vueImg/30.jpg)
+![](./vueImg/31.jpg)
+## 侦听器
+ 
