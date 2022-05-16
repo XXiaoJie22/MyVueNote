@@ -42,4 +42,35 @@
 ## axios
 ![](./vueImg/36.jpg)
 ![](./vueImg/37.jpg)
+![](./vueImg/38.jpg)
+![](./vueImg/39.jpg)
+![](./vueImg/40.jpg)
+## vue-cli
+![](./vueImg/41.jpg)
+![](./vueImg/42.jpg)
+![](./vueImg/43.jpg)
+#### 创建步骤
+![](./vueImg/44.jpg)
+![](./vueImg/45.jpg)
+![](./vueImg/46.jpg)
+![](./vueImg/47.jpg)
+![](./vueImg/48.jpg)
+![](./vueImg/49.jpg)
+![](./vueImg/51.jpg)
+![](./vueImg/50.jpg)
+![](./vueImg/52.jpg)
+![](./vueImg/53.jpg)
+#### APP.vue 定义页面ui结构
+## 组件化开发
+#### 组件是对UI结构的复用
+![](./vueImg/54.jpg)
+![](./vueImg/55.jpg)
+![](./vueImg/56.jpg)
+![](./vueImg/57.jpg)
+![](./vueImg/58.jpg)
+![](./vueImg/59.jpg)
+![](./vueImg/60.jpg)
+![](./vueImg/61.jpg)
+![](./vueImg/62.jpg)
+![](./vueImg/63.jpg)
  

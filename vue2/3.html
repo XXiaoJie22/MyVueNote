@@ -11,6 +11,8 @@
     <div id="app">
         <p>{{ info }}</p>
         <input type="text" v-model="username">
+        <button @click="get">get</button>
+        <button @click="post">post</button>
     </div>
 </body>
 <script src="./lib/vue-2.6.12.js"></script>
@@ -20,6 +22,10 @@
     axios({
         method: 'GET',
         url: 'http://127.0.0.1:8000/api/get',
+        // URL 中的查询参数 GET传参 
+        params: {},
+        // 请求体参数 POST传参
+        data: {},
     }).then(function (msg) {console.log(msg.data);});
     // 对象里面的data属性才是我们拿的真实数据
    
@@ -35,6 +41,18 @@
             info(){
                 return this.username+this.age
             }
+        },
+        methods: {
+            async get (){
+                // axios.get(URL,{params:{}}) get请求另一种写法
+                const {data:res} = await axios.get('http://127.0.0.1:8000/api/get',{params:{name:'XiaoJie',age: 22}});
+                console.log(res.data);
+            },
+            async post (){
+                // axios.psot(URL,{post请求体数据}) get请求另一种写法
+                const {data:res} = await axios.post('http://127.0.0.1:8000/api/post',{name:'Xiaojie',age: 22,sex: 'Big Man'});
+                console.log(res.data);
+            },
         },
     });
 </script>
