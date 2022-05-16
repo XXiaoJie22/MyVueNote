@@ -1,18 +1,13 @@
 <template>
-  <div id="app">
-    <h1>hello</h1>
-    <!-- 以标签形式使用注册好的组件 -->
-    <Test></Test>
-  </div>
+    <!-- 只能有一个根元素节点 -->
+    <div class="box">
+        <h1>这是用户创建的结构 --- {{ username }}</h1>
+        <button @click="change_name">改变用户名</button>
+        <Mycount></Mycount>
+    </div>
 </template>
 
-
 <script>
-// 导入需要用的vue组件
-import Test from '@/components/Test.vue'
-
-
-
 // 默认导出，固定写法
 export default {
     // data数据源
@@ -34,18 +29,21 @@ export default {
     // 当前组件的计算属性
     compute: {},
     // 当前组件的过滤器
-    filters: {},
-    // 注册导入的组件
-    components: {
-      Test
-    }
+    filters: {}
 }
 </script>
 
-<style lang="less">
+// css语法
+<style>
 .box {
-  .h1{
-    color: pink;
-  }
+    background-color: pink;
+};
+</style>
+// less语法
+<style lang="less">
+.box{
+    h1 {
+        color: red;
+    }
 }
 </style>
