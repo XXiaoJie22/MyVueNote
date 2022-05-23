@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <h1>hello</h1>
+    <h1>countFromSon  {{ countFromC }} </h1>
     <!-- 以标签形式使用注册好的组件 -->
-    <Test></Test>
+    <Test></Test><Mycount @numberChange="show"></Mycount>
   </div>
 </template>
 
@@ -21,13 +21,19 @@ export default {
         // return 出去的{}中，定义数据
         return {
             username: "XiaoJie",
+            countFromC: 0
         };   
     },
     methods: {
         change_name(){
             // 在组件中，this表示当前组件的实例对象
             this.username = "XiaoMing"
+        },
+        // 接收子组件的数据
+        show(val){
+          this.countFromC = val;
         }
+
     },
     // 当前组件的侦听器
     watch: {},
@@ -42,9 +48,10 @@ export default {
 }
 </script>
 
-<style lang="less">
-.box {
-  .h1{
+// 加上scoped 可以让该css只影响该组件,而不影响其他组件
+<style lang="less" scoped>
+#app {
+  h1{
     color: pink;
   }
 }

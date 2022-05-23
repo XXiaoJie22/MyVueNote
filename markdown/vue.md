@@ -73,4 +73,47 @@
 ![](./vueImg/61.jpg)
 ![](./vueImg/62.jpg)
 ![](./vueImg/63.jpg)
- 
+![](./vueImg/64.jpg)
+![](./vueImg/65.jpg)
+## 组件的生命周期
+![](./vueImg/66.jpg)
+![](./vueImg/67.jpg)
+![](./vueImg/68.jpg)
+## 组件之间数据共享 (面试问的比较多)
+![](./vueImg/69.jpg)
+![](./vueImg/70.jpg)
+![](./vueImg/71.jpg)
+![](./vueImg/72.jpg)
+## ref引用
+![](./vueImg/73.jpg)
+![](./vueImg/74.jpg)
+![](./vueImg/75.jpg)
+## 数组方法
+![](./vueImg/76.jpg)
+![](./vueImg/77.jpg)
+## 案例
+![](./vueImg/78.jpg)
+![](./vueImg/79.jpg)
+## 动态组件
+![](./vueImg/80.jpg)
+![](./vueImg/81.jpg)
+![](./vueImg/82.jpg)
+![](./vueImg/83.jpg)
+![](./vueImg/84.jpg)
+![](./vueImg/85.jpg)
+## 插槽
+![](./vueImg/86.jpg)
+![](./vueImg/87.jpg)
+![](./vueImg/88.jpg)
+![](./vueImg/89.jpg)
+![](./vueImg/90.jpg)
+![](./vueImg/91.jpg)
+## 自定义指令
+![](./vueImg/92.jpg)
+![](./vueImg/93.jpg)
+![](./vueImg/94.jpg)
+![](./vueImg/95.jpg)
+![](./vueImg/96.jpg)
+![](./vueImg/97.jpg)
+## 路由
+![](./vueImg/98.jpg)
