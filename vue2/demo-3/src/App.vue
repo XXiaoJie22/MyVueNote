@@ -5,7 +5,6 @@
       <Left></Left>
       <Right></Right>
     </div>
-
   </div>
 </template>
 
@@ -14,13 +13,14 @@ import Right from '@/components/Right-vue.vue'
 import Left from '@/components/Left-vue.vue'
 export default {
   components: {
-    Right, Left
+    Right,
+    Left
   }
 }
 </script>
 
 <style lang="less" scoped>
-.container{
+.container {
   display: flex;
 }
 </style>

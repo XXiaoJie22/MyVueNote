@@ -32,7 +32,7 @@
     const vm = new Vue({
         el: app,
         data: {
-            username:'Xiaojie',
+            username:'Xiaojie22',
             age:'22',
         },
         // 计算属性  要定义成方法格式 返回值是最终结果
@@ -50,7 +50,7 @@
             },
             async post (){
                 // axios.psot(URL,{post请求体数据}) get请求另一种写法
-                const {data:res} = await axios.post('http://127.0.0.1:8000/api/post',{name:'Xiaojie',age: 22,sex: 'Big Man'});
+                const {data:res} = await axios.post('http://127.0.0.1:8000/api/post',{name:this.username,age: 22,sex: 'Big Man'});
                 console.log(res.data);
             },
         },
